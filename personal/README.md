@@ -6,6 +6,6 @@ Este repositorio se encarga de documentar las notas personales. Aqui se puede en
 #### Se establecen las siguientes metas a corto plazo:
 
 - [x] Comenzar un repositorio de notas
-- [ ] Leida inicial de Flutter (Qué es?)
+- [x] Leida inicial de Flutter (Qué es?)
 - [ ] Descargar e instalar Flutter
 - [ ] Crear el primer app.
