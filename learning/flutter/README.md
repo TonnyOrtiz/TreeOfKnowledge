@@ -2,7 +2,11 @@
 
 ## Inicio : 
 
-Primer encuentro con flutter a traves del siguiente video.
+Se busca información general acerca del framewor, que és, como se instala, etc. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1ukSR1GRtMU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Primer encuentro con flutter a traves del siguiente video.
+
+[![IMAGE ALT TEXT HERE](./images/flutterVid1.gif)](https://youtu.be/1ukSR1GRtMU)
+Flutter tutorial #1 by The Net Ninja. Click en la imagen para ir al video.
 
