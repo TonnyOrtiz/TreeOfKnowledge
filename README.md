@@ -8,7 +8,7 @@ Este repositorio se utiliza para tomar notas, guardar ejemplos de código, proba
 
 Se divide el repositorio por carpetas con areas distintas
 
-* Flutter: Ruta de aprendizaje de flutter
+* [Flutter:](./learning/flutter/README.md) Ruta de aprendizaje de la tecnología Flutter.
 * ...
 
 Tonny Ortiz S.  

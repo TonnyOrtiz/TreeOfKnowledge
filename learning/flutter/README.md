@@ -1,16 +1,15 @@
-# Aprendiendo Flutter
+# Flutter
+Ruta de aprendizaje e información para recordar.  
+- Se estudia el canal The Net Ninja en youtube.com
+- Construir la primer app
 
-## Inicio : 
+Archivos de las lecciones iniciales: 
+https://github.com/iamshaunjp/flutter-beginners-tutorial  
 
-Se busca información general acerca del framewor, que és, como se instala, etc. 
+Por ultimo se agrega una bitácora con información más detallada.
 
 
-### Primer encuentro con flutter a traves del siguiente video.
 
-[![IMAGE ALT TEXT HERE](./images/flutterVid1.gif)](https://youtu.be/1ukSR1GRtMU)
-Flutter tutorial #1 by The Net Ninja. Click en la imagen para ir al video.
-
-Se comienza con la creación de una bitácora en el siguiente archivo:
-[Bitacora](./Bitacora.md)
+## [Ir a la Bitacora 📓](./Bitacora.md)
 
 

@@ -1,5 +1,8 @@
-# Bitacora
+
+# Bitácora 📓
 Se utilizará esta página para documentar el proceso de aprendizaje de Flutter.
+
+Para volver al readme principal de Flutter: [Click aquí](./README.md)
 
 ## **23/08/2022** - Instalacion de Flutter
 
