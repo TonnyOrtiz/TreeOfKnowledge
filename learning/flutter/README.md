@@ -10,3 +10,7 @@ Se busca información general acerca del framewor, que és, como se instala, etc
 [![IMAGE ALT TEXT HERE](./images/flutterVid1.gif)](https://youtu.be/1ukSR1GRtMU)
 Flutter tutorial #1 by The Net Ninja. Click en la imagen para ir al video.
 
+Se comienza con la creación de una bitácora en el siguiente archivo:
+[Bitacora](./Bitacora.md)
+
+
