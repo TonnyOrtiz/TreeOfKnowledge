@@ -1,4 +1,6 @@
-# NotesAll : Repositorio de notas
+# Tree of knowledge : Repositorio de información
+
+[![IMAGE ALT TEXT HERE](./treeofknow.jpg)]()
 
 Este repositorio se utiliza para tomar notas, guardar ejemplos de código, probar conceptos y en general crear un lugar donde se pueda almacenar conocimiento sobre código de programación.
 
