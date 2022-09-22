@@ -21,16 +21,23 @@ class WorldTime {
       //print(data);
       String datetime = data['datetime'];
       String offset = data['utc_offset'].substring(1,3);
+      String offsetSign = data['utc_offset'].substring(0,1);
+      // true si es positivo, false si es negativo
+      bool addoffset = offsetSign.compareTo('+') == 0 ? true : false;
 
       DateTime now = DateTime.parse(datetime);
-      now = now.subtract(Duration(hours: int.parse(offset)));
+      if (addoffset) {
+        now = now.add(Duration(hours: int.parse(offset)));
+      } else {
+        now = now.subtract(Duration(hours: int.parse(offset)));
+      }
       // Set the time property
       isDaytime = now.hour > 4 && now.hour < 19 ? true : false;
-      //isDaytime = true;
+      //isDaytime = false;
       time = DateFormat.jm().format(now);
 
     } catch(e) {
-      print('Error: $e');
+      //print('Error: $e');
       time = 'Error';
     }
 

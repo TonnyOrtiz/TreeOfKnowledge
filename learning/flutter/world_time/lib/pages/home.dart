@@ -12,11 +12,11 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     data = data.isEmpty ? ModalRoute.of(context)!.settings.arguments as Map: data;
-    print(data);
+    //print(data);
 
     //Set Background
     String bgImage = data['isDaytime'] ? 'day.png' : 'night.png';
-    Color bgColor = data['isDaytime'] ? Colors.lightBlueAccent[100] as Color : Color(0xff062352);
+    Color bgColor = data['isDaytime'] ? Colors.lightBlueAccent[100] as Color : Colors.black;
 
     return Scaffold(
       backgroundColor: bgColor,
@@ -29,7 +29,7 @@ class _HomeState extends State<Home> {
             ),
           ),
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(0.0,120.0,0.0,0.0),
+            padding: const EdgeInsets.fromLTRB(0.0,250.0,0.0,0.0),
             child: Column(
               children: <Widget>[
                 TextButton.icon(
