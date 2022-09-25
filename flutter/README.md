@@ -1,15 +1,10 @@
 # Flutter
 Ruta de aprendizaje e información para recordar.  
-- Se estudia el canal The Net Ninja en youtube.com
-- Construir la primer app
-
-Archivos de las lecciones iniciales: 
-https://github.com/iamshaunjp/flutter-beginners-tutorial  
-
-Por ultimo se agrega una bitácora con información más detallada.
+- Se estudia el canal The Net Ninja en youtube.com con el cual se comienza el estudio del framework
+- Se construyen las primeras app las cuales se pueden encontrar en cada una de las carpetas de este repositorio
 
 
 
-## [Ir a la Bitacora 📓](./Bitacora.md)
+## [Ir a los Apuntes 📓](./Apuntes.md)
 
 

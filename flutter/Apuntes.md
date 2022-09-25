@@ -1,10 +1,10 @@
 
-# Bitácora 📓
-Se utilizará esta página para documentar el proceso de aprendizaje de Flutter.
+# Apuntes 📓
+Se utilizará esta página para apuntes relacionados con el proceso de aprendizaje de Flutter.
 
 Para volver al readme principal de Flutter: [Click aquí](./README.md)
 
-## **23/08/2022** - Instalacion de Flutter
+## Instalacion de Flutter
 
 Se instala Flutter en Kubuntu 22.04 junto con todas sus dependencias.
 Para ello se utilizan los siguientes comandos:

@@ -1,19 +1,11 @@
 # World Time App
 
-Un proyecto de Flutter para la creación de una app que mediante el [WorldTimeAPI](worldtimeapi.org) obtiene y muestra la hora de varias ciudades alrededor del mundo.
+[![World Time App](./screens.png)]()
 
-La app cuenta con una pantalla en la que se muestra la hora y otra donde se puede cambiar de ubicación.
+Primer proyecto en Flutter en el que se crea un app que muestra la hora de varias ciudades alrededor del mundo. Para ello se hace uso de el [WorldTimeAPI](worldtimeapi.org).
 
+Se cuenta con una pantalla principal en la que se muestra la hora con un fondo que cambia entre día y noche. 
 
-## Ayuda útil
+En la pantalla de ubicaciones se muestran el resto de ciudades.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Esta app es el resultado de completar el curso de introducción a Flutter por The Net Ninja en youtube
