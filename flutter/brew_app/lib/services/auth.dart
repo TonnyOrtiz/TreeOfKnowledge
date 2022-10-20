@@ -1,4 +1,5 @@
 import 'package:brew_app/models/brewuser.dart';
+import 'package:brew_app/services/database.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class AuthService {
@@ -36,7 +37,7 @@ class AuthService {
       return _userFromFirebaseUser(user);
     } catch (e) {
       FirebaseAuthException error = e as FirebaseAuthException;     
-      return error.message;
+      return error.code;
       //return null;
     }
   }
@@ -46,6 +47,9 @@ class AuthService {
     try {
       UserCredential result = await _auth.createUserWithEmailAndPassword(email: email, password: password);
       User? user = result.user;
+      if (user != null){
+        await DatabaseService(uid: user.uid).updateUserData('0', 'Nuevo Miembro', 100);
+      }
       return _userFromFirebaseUser(user);
     } catch (e) {
       print(e.toString());

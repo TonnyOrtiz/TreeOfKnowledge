@@ -1,6 +1,8 @@
 import 'package:brew_app/models/brewuser.dart';
 import 'package:brew_app/services/auth.dart';
 import 'package:flutter/material.dart';
+import 'package:brew_app/shared/constants.dart';
+import 'package:brew_app/shared/loading.dart';
 
 class SignIn extends StatefulWidget {
   
@@ -15,6 +17,7 @@ class _SignInState extends State<SignIn> {
 
   final AuthService _auth = AuthService();
   final _formKey = GlobalKey<FormState>();
+  bool loading = false;
   //Text field state
   String email = '';
   String password = '';
@@ -22,12 +25,12 @@ class _SignInState extends State<SignIn> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return loading? const Loading() : Scaffold(
       backgroundColor: Colors.brown[100],
       appBar: AppBar(
         backgroundColor: Colors.brown[400],
         elevation: 0.0,
-        title: Text('Sign In to Brew Crew'),
+        title: Text('Ingresar'),
         actions: [
           TextButton.icon(
             onPressed: () {
@@ -35,7 +38,7 @@ class _SignInState extends State<SignIn> {
             }, 
             icon: Icon(Icons.person, color: Colors.black,), 
             label: Text(
-              'Register',
+              'Registrarse',
               style: TextStyle(
                 color: Colors.black,
               ),
@@ -51,14 +54,18 @@ class _SignInState extends State<SignIn> {
             children: <Widget>[
               SizedBox(height: 20.0,),
               TextFormField(
-                validator: (value) => (value as String).isEmpty ? 'Enter a valid email': null,
+                initialValue: email,
+                decoration: textInputDecoration.copyWith(hintText: 'Correo'),
+                validator: (value) => (value as String).isEmpty ? 'Ingrese un correo válido': null,
                 onChanged: (value) {
-                  setState(() => email = value);
+                  setState(() => email = value.trim());
                 },
               ),
               SizedBox(height: 20.0,),
               TextFormField(
-                validator: (value) => (value as String).length < 6 ? 'Enter a password with at least 6 characters long' : null,
+                initialValue: password,
+                decoration: textInputDecoration.copyWith(hintText: 'Contraseña'),
+                validator: (value) => (value as String).length < 6 ? 'Ingrese una contraseña con al menos 6 caracteres de largo' : null,
                 obscureText: true,
                 onChanged: (value) {
                   setState(() => password = value);
@@ -70,18 +77,22 @@ class _SignInState extends State<SignIn> {
                   backgroundColor: Colors.pink[400],
                 ),
                 child: Text(
-                  'Sign in',
+                  'Iniciar sesión',
                   style: TextStyle(
                     color: Colors.white,
                   ),
                 ),
                 onPressed: () async {
                   if (_formKey.currentState!.validate()) {
-                      dynamic result = await _auth.signInWithEmailAndPassword(email, password,);
-                      if (result.runtimeType == String) {
-                        setState(() => error = result);
-                      }
+                    setState(() => loading = true);
+                    dynamic result = await _auth.signInWithEmailAndPassword(email, password,);
+                    if (result.runtimeType == String) {
+                      setState(() {
+                        error = errorSignIn[result]!;
+                        loading=false;
+                      });
                     }
+                  }
                 },
               ),
               SizedBox(height: 12.0,),
