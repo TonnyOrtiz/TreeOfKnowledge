@@ -11,7 +11,8 @@ class Wrapper extends StatelessWidget {
   Widget build(BuildContext context) {
 
     final BrewUser? user = Provider.of<BrewUser?>(context);
-    print(user);
+
+    //print(user);
     // Return either Authenticate or Home widget
     if (user == null) {
       return Authenticate();

@@ -65,7 +65,15 @@ class _HomeState extends State<Home> {
             )
           ],
           ),
-          body: const BrewList(),
+          body: Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/coffee_bg.png'),
+                fit: BoxFit.fill,
+              ),
+            ),
+            child: BrewList()
+          ),
       ),
     ) ;
   }
