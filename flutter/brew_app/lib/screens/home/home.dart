@@ -25,8 +25,8 @@ class _HomeState extends State<Home> {
         context: context, 
         builder: (context) {
           return Container(
-            padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 60.0),
-            child: SettingsForm(),
+            padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 60.0),
+            child: const SettingsForm(),
           );
         }
       );
@@ -38,22 +38,22 @@ class _HomeState extends State<Home> {
       child: Scaffold(
         backgroundColor: Colors.brown[50],
         appBar: AppBar(
-          title: Text('Brew Crew'),
+          title: const Text('Brew Crew'),
           backgroundColor: Colors.brown[400],
           elevation: 4.0,
           foregroundColor: Colors.white,
           actions: <Widget>[
             TextButton.icon(
               icon: Icon(Icons.edit_attributes_sharp, color: Colors.brown[900] ,),
-              label: Text('Preferencias',
+              label: const Text('Preferencias',
                 style: TextStyle(color: Colors.black, fontSize: 15,),
               ),
               onPressed: () => _showSettingsPanel(),
             ),
-            SizedBox(width: 15),
+            const SizedBox(width: 15),
             TextButton.icon(
               icon: Icon(Icons.person, color: Colors.brown[900],), 
-              label: Text('Salir',
+              label: const Text('Salir',
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 15,
@@ -66,13 +66,13 @@ class _HomeState extends State<Home> {
           ],
           ),
           body: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/coffee_bg.png'),
                 fit: BoxFit.fill,
               ),
             ),
-            child: BrewList()
+            child: const BrewList()
           ),
       ),
     ) ;

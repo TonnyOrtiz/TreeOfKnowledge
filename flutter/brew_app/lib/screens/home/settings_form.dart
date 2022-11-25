@@ -37,11 +37,11 @@ class _SettingsFormState extends State<SettingsForm> {
             key: _formKey,
             child: Column(
               children: <Widget>[
-                Text(
+                const Text(
                   'Edite sus preferencias de Café',
                   style: TextStyle(fontSize: 18.0),
                 ),
-                SizedBox(height: 20.0,),
+                const SizedBox(height: 20.0,),
                 TextFormField(
                   enableInteractiveSelection: true,
                   initialValue: userData.name,
@@ -49,7 +49,7 @@ class _SettingsFormState extends State<SettingsForm> {
                   validator: (value) => value!=null && value.isEmpty ?  'Porfavor ingrese un nombre.' : null,
                   onChanged: (value) => setState(() => _currentName = value) ,
                 ),
-                SizedBox(height: 20.0,),
+                const SizedBox(height: 20.0,),
                 // dropdown
                 DropdownButtonFormField(
                   decoration: textInputDecoration,
@@ -62,7 +62,7 @@ class _SettingsFormState extends State<SettingsForm> {
                   }).toList(), 
                   onChanged: (value) => setState(() => _currentSugars = value as String),
                   ),
-                  SizedBox(height: 20,),
+                  const SizedBox(height: 20,),
                 /**
                  * Slider
                  */
@@ -77,14 +77,11 @@ class _SettingsFormState extends State<SettingsForm> {
                 ),
                 ElevatedButton(
                   style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.pink)),
-                  child: Text(
+                  child: const Text(
                     'Aplicar cambios',
                     style: TextStyle(color: Colors.white),
                   ),
                   onPressed: () async {
-                    print(_currentName);
-                    print(_currentSugars);
-                    print(_currentStrength);
                     if(_formKey.currentState!.validate()) {
                       await DatabaseService(uid: user.uid).updateUserData(
                         _currentSugars ?? userData.sugars, 

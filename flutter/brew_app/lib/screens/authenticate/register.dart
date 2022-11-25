@@ -36,7 +36,7 @@ class _RegisterState extends State<Register> {
             onPressed: () {
               widget.toggleView();
             }, 
-            icon: Icon(Icons.person, color: Colors.black,), 
+            icon: const Icon(Icons.person, color: Colors.black,), 
             label: const Text(
               'Iniciar Sesión',
               style: TextStyle(color: Colors.black),
@@ -45,7 +45,7 @@ class _RegisterState extends State<Register> {
         ],
       ),
       body: Container(
-        padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
+        padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
         child: Form(
           key: _formKey,
           child: Column(
@@ -96,7 +96,7 @@ class _RegisterState extends State<Register> {
               const SizedBox(height: 12.0,),
               Text(
                 error,
-                style: TextStyle(color: Colors.red, fontSize: 14.0,),
+                style: const TextStyle(color: Colors.red, fontSize: 14.0,),
               ),
             ],
           ),

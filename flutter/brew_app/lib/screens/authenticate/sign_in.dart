@@ -30,14 +30,14 @@ class _SignInState extends State<SignIn> {
       appBar: AppBar(
         backgroundColor: Colors.brown[400],
         elevation: 0.0,
-        title: Text('Ingresar'),
+        title: const Text('Ingresar'),
         actions: [
           TextButton.icon(
             onPressed: () {
               widget.toggleView();
             }, 
-            icon: Icon(Icons.person, color: Colors.black,), 
-            label: Text(
+            icon: const Icon(Icons.person, color: Colors.black,), 
+            label: const Text(
               'Registrarse',
               style: TextStyle(
                 color: Colors.black,
@@ -47,12 +47,12 @@ class _SignInState extends State<SignIn> {
         ],
       ),
       body: Container(
-        padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
+        padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
         child: Form(
           key: _formKey,
           child: Column(
             children: <Widget>[
-              SizedBox(height: 20.0,),
+              const SizedBox(height: 20.0,),
               TextFormField(
                 initialValue: email,
                 decoration: textInputDecoration.copyWith(hintText: 'Correo'),
@@ -61,7 +61,7 @@ class _SignInState extends State<SignIn> {
                   setState(() => email = value.trim());
                 },
               ),
-              SizedBox(height: 20.0,),
+              const SizedBox(height: 20.0,),
               TextFormField(
                 initialValue: password,
                 decoration: textInputDecoration.copyWith(hintText: 'Contraseña'),
@@ -71,12 +71,12 @@ class _SignInState extends State<SignIn> {
                   setState(() => password = value);
                 },
               ),
-              SizedBox(height: 40.0,),
+              const SizedBox(height: 40.0,),
               TextButton(
                 style: TextButton.styleFrom(
                   backgroundColor: Colors.pink[400],
                 ),
-                child: Text(
+                child: const Text(
                   'Iniciar sesión',
                   style: TextStyle(
                     color: Colors.white,
@@ -95,10 +95,10 @@ class _SignInState extends State<SignIn> {
                   }
                 },
               ),
-              SizedBox(height: 12.0,),
+              const SizedBox(height: 12.0,),
               Text(
                 error,
-                style: TextStyle(color: Colors.red, fontSize: 14.0,),
+                style: const TextStyle(color: Colors.red, fontSize: 14.0,),
               ),
             ],
           ),
