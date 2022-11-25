@@ -22,7 +22,7 @@ class BrewTile extends StatelessWidget {
             backgroundImage: AssetImage('assets/coffee_icon.png'),
           ),
           title: Text(brew.name),
-          subtitle: Text('Takes ${brew.sugars} sugar(s).'),
+          subtitle: brew.sugars == '1'? Text('${brew.sugars} cucharada de azucar') : Text('${brew.sugars} cucharadas de azucar'),
         ),
       ),
       );
