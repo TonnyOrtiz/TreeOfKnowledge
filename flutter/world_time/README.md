@@ -2,7 +2,7 @@
 
 [![World Time App](./screens.png)]()
 
-Primer proyecto en Flutter en el que se crea un app que muestra la hora de varias ciudades alrededor del mundo. Para ello se hace uso de el [WorldTimeAPI](worldtimeapi.org).
+Primer proyecto en Flutter en el que se crea un app que muestra la hora de varias ciudades alrededor del mundo. Para ello se hace uso de el [TimeAPI](https://timeapi.io).
 
 Se cuenta con una pantalla principal en la que se muestra la hora con un fondo que cambia entre día y noche. 
 
